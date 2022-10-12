@@ -1,22 +1,15 @@
-import React from 'react'
-import Hero from './containers/Hero'
-import Navbar from './components/Navbar'
-import About from './containers/About'
-import Projects from './containers/Projects'
-import Particle from './components/Particle'
-import Contact from './containers/Contact'
-
+import Home from './pages/Home'
+import Resume from './pages/Resume'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 const App = () => {
   return (
-    <>
-      <Particle />
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/resume' element={<Resume/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

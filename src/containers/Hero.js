@@ -2,6 +2,7 @@ import React from 'react';
 import './Hero.scss';
 import Social from '../components/Social';
 import { MdOutlineLocationOn, MdPadding }  from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -19,7 +20,11 @@ const Hero = () => {
         <MdOutlineLocationOn size={18} />
         <p>Tokyo, Japan</p>
       </div>
-      <button className='btn'>Check My Resume</button>
+
+      <Link to='/resume'>
+        <button className='btn'>Check My Resume</button>
+      </Link>
+      
       <Social />
     </section>
   )

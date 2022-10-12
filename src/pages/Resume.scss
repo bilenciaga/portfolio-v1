@@ -1,0 +1,12 @@
+.resume {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  button {
+    width: 18rem;
+  }
+}
