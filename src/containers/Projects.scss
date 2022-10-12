@@ -1,0 +1,42 @@
+@use '../mixins.scss' as *;
+
+.projects {
+
+  &__link-button {
+    text-align: center;
+    margin-top: 6rem;
+
+    a{
+      color: var(--color-white);
+      font-size: 2rem;
+      transition: all .2s;
+      position: relative;
+      border-bottom: solid 1px var(--color-white);
+      text-decoration: none;
+      padding: 3px;
+      
+      &:hover {
+        background: var(--color-white);
+        color: var(--color-black);
+        padding: 1rem;
+      }
+
+      &:hover svg {
+        transform: translateX(0.5rem) scale(1.1);
+      }
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
+
+    svg {
+      padding-top: 0.5rem;
+      transition: all .2s;
+
+      @include respond(phone) {
+        padding-top: .8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use '../mixins.scss' as *;
+
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: var(--color-white);
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 200;
+    @include respond(phone) { 
+      font-size: 1.5rem 
+    }
+  }
+
+  h1 {
+    font-size: 6rem;
+    @include respond(phone) { 
+      font-size: 4rem 
+    }
+  }
+
+  h3 {
+    font-size: 6.2rem;
+    color: var(--color-grey);
+    @include respond(phone) { 
+      font-size: 2rem 
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--color-grey);
+    margin: 1rem 0rem 2rem 0rem;
+  }
+
+}

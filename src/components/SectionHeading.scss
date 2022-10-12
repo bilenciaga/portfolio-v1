@@ -1,0 +1,31 @@
+@use '../mixins' as *;
+.section__heading {
+  display: flex;
+
+  h1 {
+    color: white;
+    font-family: var(--font-montserrat);
+    font-size: 4rem;
+    text-transform: capitalize;
+    min-width: fit-content;
+
+    @include respond (phone) {
+      font-size: 2.5rem;
+    }
+
+  }
+
+  &-line {
+    margin: auto 0px;
+    height: 1px;
+    background-color: var(--color-white);
+    opacity: 0.3;
+    margin-left: 1.5rem;
+    width: 65rem;
+    min-width: 20rem;
+
+    @include respond (phone) {
+      
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use '../mixins.scss' as *;
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 2rem;
+      text-align: center;
+      font-size: 32px;
+      position: relative;
+
+      @include respond(phone){
+        font-size: 28px;
+      }
+
+      &:hover a{
+        color: var(--color-grey);
+        transform: scale(1.1);
+      }
+
+      a{
+        display: block;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        transition: all .35s;
+      }
+    }
+  }
+}
+
